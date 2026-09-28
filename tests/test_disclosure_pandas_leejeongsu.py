@@ -1,6 +1,8 @@
 """공시 유형 집계의 기간·정정·중복 반례."""
 
 import unittest
+import sqlite3
+from contextlib import closing
 
 import pandas as pd
 
@@ -8,6 +10,18 @@ from src.disclosure_pandas_leejeongsu import analyze
 
 
 class DisclosurePandasTest(unittest.TestCase):
+    def test_sqlite_loaded_dates_regression(self):
+        raw = pd.DataFrame([
+            ("001", f"{number:014d}", "20240101", "사업보고서")
+            for number in range(438)
+        ], columns=["corp_code", "rcept_no", "rcept_dt", "report_nm"])
+        with closing(sqlite3.connect(":memory:")) as db:
+            raw.to_sql("disclosures", db, index=False)
+            loaded = pd.read_sql_query("SELECT * FROM disclosures", db)
+        by_type, monthly = analyze(loaded)
+        self.assertEqual(int(by_type["count"].sum()), 438)
+        self.assertEqual(int(monthly["count"].sum()), 438)
+
     def test_period_type_correction_and_candidate(self):
         raw = pd.DataFrame([
             ("001", "1", "20230615", "사업보고서 "),

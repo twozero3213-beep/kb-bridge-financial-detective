@@ -69,7 +69,7 @@ GitHub 계정명은 작업을 올린 인증 계정이며, 팀원 본인의 AI �
 - **역할·목적:** Issue #7 노트북, 독립 SQL 비교, 반례 검사와 AI 입력문 작성.
 - **사용 도구·요청자:** Codex 데스크톱 / 이영.
 - **실제 입력:** “우리 원데이프로젝트 과제를 생각하면서 하는거야. 각자 깃허브에 올려야 할 필수적인 것들 올리고, AI툴을 어떻게 사용했는지도 올리고 ... 다들 정확하게 됐는지 확인하고.”
-- **출력·검증:** `notebooks/analysis_disclosure.ipynb`, `tests/test_disclosure_pandas_leejeongsu.py`, `docs/disclosure_pandas_leejeongsu.md`, `docs/ai_prompts_leejeongsu.md`. 실제 공시 438건 → 기간·유형 197그룹, 월 24개, 정정·첨부 30건이다. 독립 SQL과 197그룹 모두 일치하고 전체 검사 23개가 통과했다. 기본 확인 후보 6개월, 임계값 100%에서는 5개월이다.
+- **출력·검증:** `notebooks/analysis_disclosure.ipynb`, `tests/test_disclosure_pandas_leejeongsu.py`, `docs/disclosure_pandas_leejeongsu.md`, `docs/ai_prompts_leejeongsu.md`. 실제 공시 438건 → 기간·유형 197그룹, 월 24개, 정정·첨부 30건이다. 독립 SQL과 197그룹 모두 일치하고 전체 검사 24개가 통과했다. 기본 확인 후보 6개월, 임계값 100%에서는 5개월이다.
 - **처리·이유:** 실제 데이터 실행 결과를 반영하고 원본 자체의 진위·이상 원인 판단은 보류한다. 배포용 프롬프트 2개를 이정수 본인이 입력한 것으로 기록하지 않는다. 직접 검증·최종 채택은 미확인이다.
 
 ## 계정·리뷰 이력의 범위
