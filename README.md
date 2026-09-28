@@ -72,11 +72,44 @@ Issue → 담당자 지정 → 개인 Feature Branch → 의미 있는 Commit �
 
 ## 실행 방법
 
-현재는 초기 골격 단계로 실행 가능한 분석 프로그램이 없다. 데이터 출처·스키마와 담당 기능이 확정되면 `data/`에 로컬 데이터를 준비하고, 담당자가 `sql/`, `notebooks/`, `src/`에 분석을 구현한 뒤 실행 명령과 필요한 패키지 버전을 여기에 기록한다. API 키와 비밀번호는 저장소에 넣지 않는다.
+Python, Pandas와 Jupyter가 필요하다. Open DART API 키를 로컬 환경 변수 `DART_API_KEY`로 설정하고 저장소 루트에서 실행한다. 이미 수집한 로컬 JSON이 있으면 수집 명령은 생략할 수 있다. 키·원본 JSON·SQLite 파일은 Git에 올리지 않는다. 데이터 출처와 스키마는 [데이터 연결](docs/data_source.md)을 참고한다.
 
-Open DART 데이터를 사용할 경우 키를 로컬 환경 변수 `DART_API_KEY`로 설정하고 `python -m src.dart_fetch <8자리_고유번호> <4자리_사업연도>`를 실행한다. 자세한 내용은 [데이터 연결](docs/data_source.md)을 참고한다. 분석 코드는 아직 팀원이 작성해야 한다.
-SQL용 공통 DB는 `python -m src.build_db`로 생성한다.
+```powershell
+python -m src.dart_fetch 00126380 2023
+python -m src.dart_fetch 00126380 2024
+python -m src.build_db
+python -m unittest discover -s tests -v
+jupyter nbconvert --to notebook --execute notebooks/analysis_finance.ipynb --output analysis_finance.executed.ipynb
+jupyter nbconvert --to notebook --execute notebooks/analysis_disclosure.ipynb --output analysis_disclosure.executed.ipynb
+```
+
+`data/processed/dart.sqlite`는 재무 `finance` 60행, 공시 `disclosures` 438건으로 재생성됐다. 재무 SQL은 `sql/queries_finance.sql`, 재무 Pandas는 `notebooks/analysis_finance.ipynb`, 공시 Pandas는 `notebooks/analysis_disclosure.ipynb`에 있다. 공시 SQL과 공통 제출 노트북·보고서는 최종 통합 단계에서 반영한다.
 
 ## 핵심 결과
 
-TBD - 분석 완료 후 작성.
+현재 분석에서는 재무 선택 지표 16행의 SQL/Pandas 값이 일치하고, 공시 기간·유형 197그룹의 독립 SQL/Pandas 건수도 일치했다. 원본 데이터의 진위나 기업 위험을 뜻하지 않는다. 최종 통합 수치는 `result_report.md`에 확정한다.
+
+## 이정수: 공시 Pandas 분석
+
+로컬 DART DB의 공시 438건을 기간·유형 197그룹으로 분석하고 독립 SQL과 대조했다. 실행 방법과 후보 기준은 [공시 Pandas 기록](docs/disclosure_pandas_leejeongsu.md), 실행 결과는 `notebooks/analysis_disclosure.ipynb`에 있다. 최종 보고서는 전체 기능 통합 후 확정한다.
+
+## 임도윤: 브리핑 생성
+
+검증된 재무·공시 분석 결과(JSON)를 바탕으로 한국어 Markdown 브리핑을 생성하는 스크립트입니다.
+
+### 실행 방법
+
+```bash
+# 가상 예시 데이터로 브리핑 생성 (표준 출력)
+python src/briefing_limdoyun.py --input examples/limdoyun/sample_validated_SAMPLE.json
+
+# 결과를 Markdown 파일로 저장
+python src/briefing_limdoyun.py --input examples/limdoyun/sample_validated_SAMPLE.json --output examples/limdoyun/briefing_output.md
+```
+
+### 테스트 실행
+
+```bash
+# 검증 케이스(단위 및 통합 테스트) 실행
+python -m unittest tests/test_briefing_limdoyun.py
+```
