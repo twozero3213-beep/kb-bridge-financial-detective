@@ -1,7 +1,7 @@
 # 팀원별 기여 기록
 
 Issue·Commit·PR·Review 링크와 실제 상태를 기록한다. 계정 인증으로 올린 기록과
-팀원 본인이 직접 작성·검토한 사실은 구분한다. 최종 결과물 반영은 `main` 머지 후 확인한다.
+팀원 본인이 직접 작성·검토한 사실은 구분한다. 최종 공통 결과물은 동료 승인 뒤 [PR #21](https://github.com/twozero3213-beep/kb-bridge-financial-detective/pull/21)로 공개 `main`에 병합됐고, 기본 README와 실행 노트북을 다시 확인했다. 아래 `최종 결과물 반영`은 담당 **산출물의 포함 여부**이며 본인의 직접 작성 증명이 아니다.
 
 ## 나지수
 
@@ -32,7 +32,7 @@ Review한 PR: 나지수 계정의 실제 제출 리뷰 확인되지 않음
 - [x] Pull Request (이영 계정)
 - [ ] 다른 팀원 PR Review
 - [x] dev Merge
-- [ ] 최종 결과물 반영
+- [x] 최종 결과물 반영 (공개 main PR #21)
 
 ## 강동윤
 
@@ -63,7 +63,7 @@ Review한 PR: [안지형 PR #12 수정 요청](https://github.com/twozero3213-be
 - [x] Pull Request
 - [x] 다른 팀원 PR Review
 - [x] dev Merge
-- [ ] 최종 결과물 반영
+- [x] 최종 결과물 반영 (공개 main PR #21)
 
 ## 안지형
 
@@ -94,7 +94,7 @@ Review한 PR: [이정수 PR #10 수정 요청](https://github.com/twozero3213-be
 - [x] Pull Request
 - [x] 다른 팀원 PR Review
 - [x] dev Merge
-- [ ] 최종 결과물 반영
+- [x] 최종 결과물 반영 (공개 main PR #21)
 
 ## 이영
 
@@ -125,7 +125,7 @@ Review한 PR: [이정수 최종 재현 PR #19 승인](https://github.com/twozero
 - [x] Pull Request
 - [x] 다른 팀원 PR Review
 - [x] dev Merge
-- [ ] 최종 결과물 반영
+- [x] 최종 결과물 반영 (공개 main PR #21)
 
 ## 이정수
 
@@ -156,7 +156,7 @@ Review한 PR: [이영 PR #9 수정 요청](https://github.com/twozero3213-beep/k
 - [x] Pull Request
 - [x] 다른 팀원 PR Review
 - [x] dev Merge
-- [ ] 최종 결과물 반영
+- [x] 최종 결과물 반영 (공개 main PR #21)
 
 ## 임도윤
 
@@ -187,4 +187,4 @@ Review한 PR: [이영 PR #9 승인](https://github.com/twozero3213-beep/kb-bridg
 - [x] Pull Request
 - [x] 다른 팀원 PR Review
 - [x] dev Merge
-- [ ] 최종 결과물 반영
+- [x] 최종 결과물 반영 (공개 main PR #21)
