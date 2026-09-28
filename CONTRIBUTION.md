@@ -5,29 +5,29 @@ Issue·Commit·PR·Review 링크와 실제 상태를 기록한다. 계정 인증
 
 ## 나지수
 
-담당 Issue:
+담당 Issue: [#5 공시 SQL](https://github.com/twozero3213-beep/kb-bridge-financial-detective/issues/5)
 
-담당 기능:
+담당 기능: 공시 월·유형별 SQL 집계, 정정 수와 전년 같은 달 후보 계산
 
-Branch:
+Branch: `feature/lee-disclosure-sql` (이영의 대체 수행 브랜치)
 
-개인 산출물:
+배정 산출물: `sql/queries_disclosure.sql`, `src/run_disclosure_sql.py`, `tests/test_queries_disclosure.py`, `docs/disclosure_sql_jisu_assignment.md`, `docs/ai_prompts_disclosure_sql.md`
 
-주요 Commit:
+주요 Commit: [이영 계정 구현 `b3d6b5d`](https://github.com/twozero3213-beep/kb-bridge-financial-detective/commit/b3d6b5d), 반례·검증 후속 커밋 추가 예정
 
-Pull Request:
+Pull Request: `dev` 대상 PR 생성 예정
 
-Review한 PR:
+Review한 PR: 나지수 계정의 실제 제출 리뷰 확인되지 않음
 
-본인 기여 설명:
+기여 설명: 나지수님에게 배정된 공시 SQL을 팀 사정으로 이영이 대신 구현·업로드했다. 실제 DART 공시 438건을 197개 기간·유형 그룹으로 집계하고 이정수 Pandas와 불일치 0건을 확인했다. 나지수님 계정 작성·직접 검토로 소급하지 않는다.
 
-60초 설명:
+60초 설명: 설명용 요약 — 접수일 연월과 공시 유형별 건수를 세고 정정 접수를 따로 남긴다. 2024년 월별 건수를 전년 같은 달과 비교해 50%/10건 기준의 확인 후보 6개월을 표시한다. 전년 값이 없으면 증감률은 비워 둔다.
 
 상태:
 
-- [ ] Issue
-- [ ] Feature Branch
-- [ ] 의미 있는 Commit 1
+- [x] Issue
+- [x] Feature Branch (이영 대체)
+- [x] 의미 있는 Commit 1 (이영 작성)
 - [ ] 의미 있는 Commit 2
 - [ ] Pull Request
 - [ ] 다른 팀원 PR Review

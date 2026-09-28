@@ -27,10 +27,16 @@ def run(database):
                               ["count", "correction_count"])
     current = sql_month.loc[sql_month.period.str.startswith("2024")]
     pandas_current = pandas_month.loc[pandas_month.period.str.startswith("2024")]
+    current = current.assign(has_previous=current.previous_count.notna().astype(int))
+    pandas_current = pandas_current.assign(
+        has_previous=pandas_current.previous_count.notna().astype(int))
     by_month = compare_results(current, pandas_current, ["corp_code", "period"],
-                               ["count", "correction_count", "previous_count",
-                                "change_count", "change_pct", "candidate"], atol=1e-8)
-    checks = by_type + by_month
+                               ["count", "correction_count", "has_previous", "candidate"])
+    by_change = compare_results(current.loc[current.has_previous.eq(1)],
+                                pandas_current.loc[pandas_current.has_previous.eq(1)],
+                                ["corp_code", "period"],
+                                ["previous_count", "change_count", "change_pct"], atol=1e-8)
+    checks = by_type + by_month + by_change
     failures = [item for item in checks if item["status"] != "PASS"]
     if failures:
         raise ValueError(f"SQL/Pandas 불일치: {failures}")
