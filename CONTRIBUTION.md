@@ -101,13 +101,13 @@ Review한 PR: TBD - 강동윤 PR 검토 예정, 실제 Review URL 기록
 
 담당 기능: Open DART 연결·공통 DB·데이터 구조 검증, GitHub 협업 관리
 
-Branch: `feature/setup-collaboration` (작업 중, 데이터·협업 공통 PR); 후속 데이터 작업이 필요하면 `feature/twozero3213-beep-data`
+Branch: `feature/setup-collaboration` (원격 Push 완료, 데이터·협업 공통 PR)
 
 개인 산출물: `src/dart_fetch.py`, `src/build_db.py`, 데이터 검증 기록 (AI 초안 실행·검증 후 반영)
 
-주요 Commit: TBD - 실제 Commit URL 기록
+주요 Commit: [협업 양식·역할 배정](https://github.com/twozero3213-beep/kb-bridge-financial-detective/commit/d3ddad19455d9ec4ab54ff459f5ae4d48952e582), [Open DART 수집·DB 생성](https://github.com/twozero3213-beep/kb-bridge-financial-detective/commit/4fb1c959f6e9be541352a50c51c1513b0febe36b)
 
-Pull Request: TBD - `dev` 대상 PR URL 기록
+Pull Request: [#9 `dev` 대상 PR](https://github.com/twozero3213-beep/kb-bridge-financial-detective/pull/9) (임도윤 Review 요청, Merge 전)
 
 Review한 PR: TBD - 임도윤 PR 검토 예정, 실제 Review URL 기록
 
@@ -118,10 +118,10 @@ Review한 PR: TBD - 임도윤 PR 검토 예정, 실제 Review URL 기록
 상태:
 
 - [x] Issue
-- [ ] Feature Branch
-- [ ] 의미 있는 Commit 1
-- [ ] 의미 있는 Commit 2
-- [ ] Pull Request
+- [x] Feature Branch
+- [x] 의미 있는 Commit 1
+- [x] 의미 있는 Commit 2
+- [x] Pull Request
 - [ ] 다른 팀원 PR Review
 - [ ] dev Merge
 - [ ] 최종 결과물 반영
