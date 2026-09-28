@@ -13,9 +13,9 @@ Branch: `feature/lee-disclosure-sql` (이영의 대체 수행 브랜치)
 
 배정 산출물: `sql/queries_disclosure.sql`, `src/run_disclosure_sql.py`, `tests/test_queries_disclosure.py`, `docs/disclosure_sql_jisu_assignment.md`, `docs/ai_prompts_disclosure_sql.md`
 
-주요 Commit: [이영 계정 구현 `b3d6b5d`](https://github.com/twozero3213-beep/kb-bridge-financial-detective/commit/b3d6b5d), 반례·검증 후속 커밋 추가 예정
+주요 Commit: [이영 계정 구현 `b3d6b5d`](https://github.com/twozero3213-beep/kb-bridge-financial-detective/commit/b3d6b5d), [반례·AI 검증 `ebb4fb9`](https://github.com/twozero3213-beep/kb-bridge-financial-detective/commit/ebb4fb9)
 
-Pull Request: `dev` 대상 PR 생성 예정
+Pull Request: [#16](https://github.com/twozero3213-beep/kb-bridge-financial-detective/pull/16) → `dev` merge [`3e7e236`](https://github.com/twozero3213-beep/kb-bridge-financial-detective/commit/3e7e236), [이정수 계정 리뷰](https://github.com/twozero3213-beep/kb-bridge-financial-detective/pull/16#pullrequestreview-5335109815)
 
 Review한 PR: 나지수 계정의 실제 제출 리뷰 확인되지 않음
 
@@ -28,10 +28,10 @@ Review한 PR: 나지수 계정의 실제 제출 리뷰 확인되지 않음
 - [x] Issue
 - [x] Feature Branch (이영 대체)
 - [x] 의미 있는 Commit 1 (이영 작성)
-- [ ] 의미 있는 Commit 2
-- [ ] Pull Request
+- [x] 의미 있는 Commit 2 (이영 작성)
+- [x] Pull Request (이영 계정)
 - [ ] 다른 팀원 PR Review
-- [ ] dev Merge
+- [x] dev Merge
 - [ ] 최종 결과물 반영
 
 ## 강동윤
@@ -108,7 +108,7 @@ Branch: `feature/setup-collaboration`
 
 주요 Commit: [협업 양식·역할 배정 `d3ddad1`](https://github.com/twozero3213-beep/kb-bridge-financial-detective/commit/d3ddad1), [Open DART 수집·DB 생성 `4fb1c95`](https://github.com/twozero3213-beep/kb-bridge-financial-detective/commit/4fb1c95), [실제 데이터 구조 기록 `4baaca5`](https://github.com/twozero3213-beep/kb-bridge-financial-detective/commit/4baaca5)
 
-Pull Request: [#9](https://github.com/twozero3213-beep/kb-bridge-financial-detective/pull/9) → `dev` 대상, 충돌 해결·재검토 중
+Pull Request: [#9](https://github.com/twozero3213-beep/kb-bridge-financial-detective/pull/9) → `dev` merge [`987a29c`](https://github.com/twozero3213-beep/kb-bridge-financial-detective/commit/987a29c); 공시 SQL 대체 구현 [#16](https://github.com/twozero3213-beep/kb-bridge-financial-detective/pull/16) → `dev` merge [`3e7e236`](https://github.com/twozero3213-beep/kb-bridge-financial-detective/commit/3e7e236)
 
 Review한 PR: 추후 실제 제출 리뷰 링크 기록
 
@@ -124,7 +124,7 @@ Review한 PR: 추후 실제 제출 리뷰 링크 기록
 - [x] 의미 있는 Commit 2
 - [x] Pull Request
 - [ ] 다른 팀원 PR Review
-- [ ] dev Merge
+- [x] dev Merge
 - [ ] 최종 결과물 반영
 
 ## 이정수
