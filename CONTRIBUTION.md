@@ -137,11 +137,11 @@ Branch: `feature/leejeongsu-validation` (기존 PR #10 브랜치에서 담당 �
 
 개인 산출물: `src/disclosure_pandas_leejeongsu.py`, `notebooks/analysis_disclosure.ipynb`, `tests/test_disclosure_pandas_leejeongsu.py`, `src/validation_leejeongsu.py`, `docs/disclosure_pandas_leejeongsu.md`, `docs/ai_prompts_leejeongsu.md`, `ai_log.md`의 이정수 절
 
-주요 Commit: 기존 [`0655783`](https://github.com/jw082501/kb-bridge-financial-detective/commit/0655783), [`c03eb46`](https://github.com/jw082501/kb-bridge-financial-detective/commit/c03eb46); 실제 공시 분석 보완 커밋 추가 예정
+주요 Commit: 기존 계정 작성 [`0655783`](https://github.com/jw082501/kb-bridge-financial-detective/commit/0655783), [`c03eb46`](https://github.com/jw082501/kb-bridge-financial-detective/commit/c03eb46); 이영 요청으로 보완한 실제 공시 분석 [`c81c60c`](https://github.com/jw082501/kb-bridge-financial-detective/commit/c81c60c), 날짜 처리 회귀 검사 [`bbaf37c`](https://github.com/jw082501/kb-bridge-financial-detective/commit/bbaf37c)
 
 Pull Request: [#10](https://github.com/twozero3213-beep/kb-bridge-financial-detective/pull/10) → `dev` 대상, 검토 중
 
-Review한 PR: 검토 후 링크 추가
+Review한 PR: [이영 PR #9 수정 요청](https://github.com/twozero3213-beep/kb-bridge-financial-detective/pull/9#pullrequestreview-5334886166)
 
 본인 기여 설명: 담당 산출물은 실제 DART 공시 438건을 기간·유형 197그룹으로 집계하고 독립 SQL과 불일치 0건을 확인했다. 이영 요청으로 Codex가 이정수 담당 브랜치에 분석·노트북을 추가해 실행하고 이정수 계정 인증으로 올린다. 이정수 본인의 직접 작성·수동 검토는 확인되지 않았다.
 
@@ -154,7 +154,7 @@ Review한 PR: 검토 후 링크 추가
 - [x] 의미 있는 Commit 1
 - [x] 의미 있는 Commit 2
 - [x] Pull Request
-- [ ] 다른 팀원 PR Review
+- [x] 다른 팀원 PR Review
 - [ ] dev Merge
 - [ ] 최종 결과물 반영
 
