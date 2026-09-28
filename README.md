@@ -74,4 +74,3 @@ python src/briefing_limdoyun.py --input examples/limdoyun/sample_validated_SAMPL
 # 검증 케이스(단위 및 통합 테스트) 실행
 python -m unittest tests/test_briefing_limdoyun.py
 ```
-

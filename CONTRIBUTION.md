@@ -67,32 +67,32 @@ Review한 PR: [안지형 PR #12 수정 요청](https://github.com/twozero3213-be
 
 ## 안지형
 
-담당 Issue:
+담당 Issue: [#6 재무 Pandas](https://github.com/twozero3213-beep/kb-bridge-financial-detective/issues/6)
 
-담당 기능:
+담당 기능: 실제 DART 재무 원본의 네 지표 증감액·증감률 계산과 재무 SQL 결과 교차검증
 
-Branch:
+Branch: `feature/agh3724-finance-pandas`
 
-개인 산출물:
+개인 산출물: `src/finance_pandas_anjihyeong.py`, `notebooks/analysis_finance.ipynb`, `tests/test_finance_pandas_anjihyeong.py`, `docs/finance_pandas_anjihyeong.md`, `docs/ai_prompts_anjihyeong.md`, `ai_log.md`의 안지형 절
 
-주요 Commit:
+주요 Commit: [`25d4d06`](https://github.com/agh3724/kb-bridge-financial-detective/commit/25d4d06), [`3a76edc`](https://github.com/agh3724/kb-bridge-financial-detective/commit/3a76edc), 실행 가능한 실제 DB 분석으로 수정한 후속 커밋
 
-Pull Request:
+Pull Request: [#12](https://github.com/twozero3213-beep/kb-bridge-financial-detective/pull/12) → `dev` 대상, 검토 중
 
-Review한 PR:
+Review한 PR: [이정수 PR #10 수정 요청](https://github.com/twozero3213-beep/kb-bridge-financial-detective/pull/10#pullrequestreview-5334727726)
 
-본인 기여 설명:
+본인 기여 설명: 담당 산출물은 사업보고서·KRW·CFS/OFS를 구분해 실제 DART 원본 60행에서 선택 지표 16행을 계산하고 강동윤 SQL과 16행 모두 일치함을 확인한다. 이영 요청으로 Codex가 안지형 담당 브랜치에 코드를 작성·실행하고 안지형 계정 인증으로 올렸다. 안지형 본인 직접 작성·검토는 확인되지 않았다.
 
-60초 설명:
+60초 설명: 설명용 요약 — 전기 금액이 0이면 증감률은 결측, 음수이면 분모의 절댓값을 사용한다. 중복 계정은 `ord` 대표 행을 택하고 `source_rows`를 기록한다. SQL 비교는 같은 원본의 계산 일치를 확인하며 원본 자체의 정확성을 보증하지 않는다.
 
 상태:
 
-- [ ] Issue
-- [ ] Feature Branch
-- [ ] 의미 있는 Commit 1
-- [ ] 의미 있는 Commit 2
-- [ ] Pull Request
-- [ ] 다른 팀원 PR Review
+- [x] Issue
+- [x] Feature Branch
+- [x] 의미 있는 Commit 1
+- [x] 의미 있는 Commit 2
+- [x] Pull Request
+- [x] 다른 팀원 PR Review
 - [ ] dev Merge
 - [ ] 최종 결과물 반영
 
