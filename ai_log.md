@@ -67,3 +67,15 @@ TBD
 ### 판단 이유
 
 TBD
+
+## 이정수 Issue #7 공시 Pandas — 2026-09-28 실제 세션
+
+- 사용자 요청: 새 배정(이정수: 공시 Pandas Issue #7)에 대해 “그럼 그거 진행해줄래??”. 후속 요청: “나중에 올라올 거 같은데 그거 바탕으로 자동 적용 안될까”.
+- 실제 입력: 배포 ZIP의 build_db.py와 Issue #7. disclosures 필수 컬럼 corp_code/rcept_no/rcept_dt/report_nm 확인. 실제 기업·기간·DB와 팀 SQL은 미제공.
+- AI 제안/구현: 공시 월별·유형별 집계, 정정/중복 정책, 전월 대비 변화, 확인 후보·민감도, 공통 설정/DB/팀 SQL 자동 읽기. 자체 참조 SQL과 팀 SQL 대조 분리.
+- AI 실행 검증: Python 3.12.10/Pandas 3.0.5에서 `python -m unittest discover -s tests -v`, 14개 PASS. Notebook 코드 셀을 순서대로 Python 실행. 합성 데이터 자체 SQL/Pandas 12그룹 일치, 0 불일치. 실제 기업 분석 결과가 아님.
+- 수정 근거: Windows 임시 SQLite 연결을 닫지 않아 테스트 정리 실패 → closing 적용. 데이터 최소/최대일로 수집 완료를 추정하지 않고 coverage_confirmed 설정 요구. 자동 도착 감지는 임시 팀 SQL 대역으로만 검증.
+- 제안 판단: 구조와 테스트를 갖춘 초안으로 채택 제안. 실제 데이터와 팀 SQL 대조는 미완료.
+- 사람의 직접 실행·검증/채택·수정·폐기: 아직 확인되지 않음.
+- Commit 실행 권한 요청은 승인되지 않아 이번 작업의 Commit/Push/PR/Review/Merge는 하지 않았음. 기존 검증 브랜치의 기록을 새 역할 완료로 세지 않음.
+- 후속 사용자 입력: “엉 승인할게”. Commit·Push 승인을 확인한 뒤 테스트 14개를 다시 실행해 PASS 확인. 기능 구현을 30e8ad8로 커밋하고 테스트·문서를 별도 커밋으로 저장한다. Push 완료 여부는 원격 기록으로 확인하며 사람의 직접 테스트·Review 완료로 간주하지 않는다.

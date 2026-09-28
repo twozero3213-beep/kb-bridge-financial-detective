@@ -1,0 +1,14 @@
+﻿{
+  "corp_code": null,
+  "start": null,
+  "end": null,
+  "coverage_start": null,
+  "coverage_end": null,
+  "coverage_confirmed": false,
+  "corrections": "include",
+  "database": "data/processed/dart.sqlite",
+  "team_sql": "sql/queries_disclosure.sql",
+  "threshold_pct": 100,
+  "min_increase": 3,
+  "output_dir": "data/processed/disclosure_analysis"
+}
