@@ -110,7 +110,7 @@ Branch: `feature/setup-collaboration`
 
 Pull Request: [#9](https://github.com/twozero3213-beep/kb-bridge-financial-detective/pull/9) → `dev` merge [`987a29c`](https://github.com/twozero3213-beep/kb-bridge-financial-detective/commit/987a29c); 공시 SQL 대체 구현 [#16](https://github.com/twozero3213-beep/kb-bridge-financial-detective/pull/16) → `dev` merge [`3e7e236`](https://github.com/twozero3213-beep/kb-bridge-financial-detective/commit/3e7e236)
 
-Review한 PR: 추후 실제 제출 리뷰 링크 기록
+Review한 PR: [이정수 최종 재현 PR #19 승인](https://github.com/twozero3213-beep/kb-bridge-financial-detective/pull/19#pullrequestreview-5335229735)
 
 본인 기여 설명: 공통 수집·적재 코드로 로컬 Open DART JSON 4개에서 재무 60행과 공시 438건의 SQLite DB를 재현했다. 이영 요청으로 Codex가 코드·테스트·기록을 작성·실행했고 이영 계정에 올린다.
 
@@ -123,7 +123,7 @@ Review한 PR: 추후 실제 제출 리뷰 링크 기록
 - [x] 의미 있는 Commit 1
 - [x] 의미 있는 Commit 2
 - [x] Pull Request
-- [ ] 다른 팀원 PR Review
+- [x] 다른 팀원 PR Review
 - [x] dev Merge
 - [ ] 최종 결과물 반영
 
