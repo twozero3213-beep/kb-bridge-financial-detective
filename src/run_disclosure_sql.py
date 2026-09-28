@@ -32,6 +32,7 @@ def run(database):
         has_previous=pandas_current.previous_count.notna().astype(int))
     by_month = compare_results(current, pandas_current, ["corp_code", "period"],
                                ["count", "correction_count", "has_previous", "candidate"])
+    # 전년 월이 없을 때 양쪽 NULL을 숫자로 비교하면 거짓 불일치이므로 계산 가능한 월만 대조한다.
     by_change = compare_results(current.loc[current.has_previous.eq(1)],
                                 pandas_current.loc[pandas_current.has_previous.eq(1)],
                                 ["corp_code", "period"],

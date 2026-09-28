@@ -20,9 +20,9 @@ Python, Pandas, SQL, Git/GitHub, AI, Open DART 또는 강사 제공 데이터. n
 | --- | --- |
 | `data/raw/` | 원본 데이터의 로컬 보관 위치. 데이터 파일은 Git에서 제외 |
 | `data/processed/` | 전처리 데이터의 로컬 보관 위치. 데이터 파일은 Git에서 제외 |
-| `sql/queries.sql` | 데이터 스키마 확인 후 팀원이 작성할 SQL 영역 |
-| `notebooks/analysis.ipynb` | Pandas 분석과 SQL 결과 비교를 위한 노트북 골격 |
-| `src/` | 추후 재사용할 Python 코드 |
+| `sql/queries.sql` | 실제 재무·공시 SQL을 합친 공통 제출 파일 |
+| `notebooks/analysis.ipynb` | 실제 데이터로 실행한 SQL·Pandas 통합 분석 |
+| `src/` | 수집·적재·역할별 분석·검증 코드 |
 | `docs/project_rules.md` | 팀 형상관리·검증 규칙 |
 | `docs/work_packages.md` | 6개 독립 작업 후보와 완료 기준 |
 | `docs/data_source.md` | Open DART API 출처와 로컬 실행·검증 기준 |
@@ -31,7 +31,7 @@ Python, Pandas, SQL, Git/GitHub, AI, Open DART 또는 강사 제공 데이터. n
 | `workflow/` | 핵심 분석 완료 후 필요한 자동화 자료 |
 | `CONTRIBUTION.md` | 팀원별 Issue, Commit, PR, Review, 기여 기록 |
 | `ai_log.md` | AI 사용과 사람의 검증·판단 기록 |
-| `result_report.md` | 최종 분석 결과 보고서 골격 |
+| `result_report.md` | 최종 수치·후보·한계·근거 보고서 |
 
 ## GitHub Workflow
 
@@ -63,7 +63,7 @@ Issue → 담당자 지정 → 개인 Feature Branch → 의미 있는 Commit �
 
 | 이름 | GitHub | 담당 작업 |
 | --- | --- | --- |
-| 나지수 | `skwltn2004-code` | 공시 SQL (#5) |
+| 나지수 | `skwltn2004-code` | 공시 SQL 배정 (#5), 이영 대체 구현·업로드 |
 | 강동윤 | `dongyungang94-coder` | 재무 SQL (#4) |
 | 안지형 | `agh3724` | 재무 Pandas (#6) |
 | 이영 | `twozero3213-beep` | 데이터 수집·구조 확인 (#3), 저장소 관리 (#2) |
@@ -81,17 +81,19 @@ python -m src.build_db
 python -m unittest discover -s tests -v
 jupyter nbconvert --to notebook --execute notebooks/analysis_finance.ipynb --output analysis_finance.executed.ipynb
 jupyter nbconvert --to notebook --execute notebooks/analysis_disclosure.ipynb --output analysis_disclosure.executed.ipynb
+jupyter nbconvert --to notebook --execute notebooks/analysis.ipynb --output analysis.executed.ipynb
+python -m src.run_disclosure_sql data/processed/dart.sqlite
 ```
 
-`data/processed/dart.sqlite`는 재무 `finance` 60행, 공시 `disclosures` 438건으로 재생성됐다. 재무 SQL은 `sql/queries_finance.sql`, 재무 Pandas는 `notebooks/analysis_finance.ipynb`, 공시 Pandas는 `notebooks/analysis_disclosure.ipynb`에 있다. 공시 SQL과 공통 제출 노트북·보고서는 최종 통합 단계에서 반영한다.
+`data/processed/dart.sqlite`는 재무 `finance` 60행, 공시 `disclosures` 438건으로 재생성됐다. 역할별 원본은 `sql/queries_finance.sql`, `sql/queries_disclosure.sql`, `notebooks/analysis_finance.ipynb`, `notebooks/analysis_disclosure.ipynb`다. 공통 제출물은 `sql/queries.sql`, `notebooks/analysis.ipynb`, `result_report.md`, `ai_log.md`, `CONTRIBUTION.md`다.
 
 ## 핵심 결과
 
-현재 분석에서는 재무 선택 지표 16행의 SQL/Pandas 값이 일치하고, 공시 기간·유형 197그룹의 독립 SQL/Pandas 건수도 일치했다. 원본 데이터의 진위나 기업 위험을 뜻하지 않는다. 최종 통합 수치는 `result_report.md`에 확정한다.
+2024년 삼성전자 연결 영업이익은 전기 6,566,976,000,000원에서 32,725,961,000,000원(+398.341%)으로 변했다. 재무 선택 지표 16행의 SQL/Pandas 값이 일치했다. 공시 438건은 기간·유형 197그룹, 24개월, 정정·첨부추가 30건으로 집계됐고 SQL/Pandas 비교 36항목이 모두 일치했다. 2024년 50%/10건 기준 확인 후보는 3·6·9·10·11·12월이다. 원본 진위·기업 위험·인과 관계를 뜻하지 않는다. 수치·방법·한계는 [최종 결과 보고서](result_report.md)에 있다.
 
 ## 이정수: 공시 Pandas 분석
 
-로컬 DART DB의 공시 438건을 기간·유형 197그룹으로 분석하고 독립 SQL과 대조했다. 실행 방법과 후보 기준은 [공시 Pandas 기록](docs/disclosure_pandas_leejeongsu.md), 실행 결과는 `notebooks/analysis_disclosure.ipynb`에 있다. 최종 보고서는 전체 기능 통합 후 확정한다.
+로컬 DART DB의 공시 438건을 기간·유형 197그룹으로 분석하고 독립 SQL과 대조했다. 실행 방법과 후보 기준은 [공시 Pandas 기록](docs/disclosure_pandas_leejeongsu.md), 실행 결과는 `notebooks/analysis_disclosure.ipynb`에 있다.
 
 ## 임도윤: 브리핑 생성
 
