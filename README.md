@@ -53,3 +53,5 @@ Issue → 담당자 지정 → 개인 Feature Branch → 의미 있는 Commit �
 ## 핵심 결과
 
 TBD - 분석 완료 후 작성.
+
+이정수 검증 파트의 실행법·입력 계약·테스트 근거: [검증 모듈 안내](docs/validation_leejeongsu.md).
