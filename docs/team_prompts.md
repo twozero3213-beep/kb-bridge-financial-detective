@@ -1,4 +1,6 @@
-﻿# 작업별 AI 프롬프트 기록
+# 작업별 AI 프롬프트 기록
+
+이 문서는 PR #10 최초 검증 모듈 작성 당시의 입력 맥락이다. 실제 공시 분석과 현재 Issue #7 입력문·실행 결과는 `docs/ai_prompts_leejeongsu.md`, `docs/disclosure_pandas_leejeongsu.md`, `ai_log.md`를 따른다. 아래의 당시 "미제공" 상태는 현재 상태가 아니다.
 
 ## 이정수 검증 파트 — 이번 실제 요청
 

@@ -1,0 +1,72 @@
+{
+  "schema_version": "0.1",
+  "is_sample": true,
+  "items": [
+    {
+      "item_id": "SAMPLE-001",
+      "company_name": "(가상) 예시전자",
+      "corp_code": "00000000",
+      "period_previous": "2025.1H",
+      "period_current": "2026.1H",
+      "metric_name": "매출채권",
+      "unit": "원",
+      "previous_value": 1000000000,
+      "current_value": 1500000000,
+      "change_rate_pct": 50.0,
+      "data_source": "Open DART 반기보고서 재무제표",
+      "validated": true,
+      "validated_by": "검증 담당자",
+      "disclosures": [
+        {
+          "title": "(가상) 반기보고서 (2026.06)",
+          "rcept_dt": "20260814",
+          "rcept_no": "20260814000123"
+        }
+      ]
+    },
+    {
+      "item_id": "SAMPLE-002",
+      "company_name": "(가상) 테스트화학",
+      "corp_code": "00000001",
+      "period_previous": "2025.1H",
+      "period_current": "2026.1H",
+      "metric_name": "재고자산",
+      "unit": "원",
+      "previous_value": 800000000,
+      "current_value": 1200000000,
+      "change_rate_pct": 50.0,
+      "data_source": "Open DART 반기보고서 재무제표",
+      "validated": true,
+      "validated_by": "검증 담당자",
+      "disclosures": [
+        {
+          "title": "(가상) 반기보고서 (2026.06)",
+          "rcept_dt": "20260814",
+          "rcept_no": "20260814000456"
+        }
+      ]
+    },
+    {
+      "item_id": "SAMPLE-003",
+      "company_name": "(가상) 미래바이오",
+      "corp_code": "00000002",
+      "period_previous": "2025.1H",
+      "period_current": "2026.1H",
+      "metric_name": "영업이익",
+      "unit": "원",
+      "previous_value": -200000000,
+      "current_value": 300000000,
+      "change_rate_pct": null,
+      "data_source": "Open DART 반기보고서 재무제표",
+      "validated": true,
+      "validated_by": "검증 담당자",
+      "disclosures": [
+        {
+          "title": "(가상) 단일판매·공급계약체결",
+          "rcept_dt": "20260710",
+          "rcept_no": "20260710000789"
+        }
+      ]
+    }
+  ]
+}

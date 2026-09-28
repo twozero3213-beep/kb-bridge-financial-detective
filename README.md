@@ -54,4 +54,27 @@ Issue → 담당자 지정 → 개인 Feature Branch → 의미 있는 Commit �
 
 TBD - 분석 완료 후 작성.
 
-이정수 검증 파트의 실행법·입력 계약·테스트 근거: [검증 모듈 안내](docs/validation_leejeongsu.md).
+## 이정수: 공시 Pandas 분석
+
+로컬 DART DB의 공시 438건을 기간·유형 197그룹으로 분석하고 독립 SQL과 대조했다. 실행 방법과 후보 기준은 [공시 Pandas 기록](docs/disclosure_pandas_leejeongsu.md), 실행 결과는 `notebooks/analysis_disclosure.ipynb`에 있다. 최종 보고서는 전체 기능 통합 후 확정한다.
+
+## 임도윤: 브리핑 생성
+
+검증된 재무·공시 분석 결과(JSON)를 바탕으로 한국어 Markdown 브리핑을 생성하는 스크립트입니다.
+
+### 실행 방법
+
+```bash
+# 가상 예시 데이터로 브리핑 생성 (표준 출력)
+python src/briefing_limdoyun.py --input examples/limdoyun/sample_validated_SAMPLE.json
+
+# 결과를 Markdown 파일로 저장
+python src/briefing_limdoyun.py --input examples/limdoyun/sample_validated_SAMPLE.json --output examples/limdoyun/briefing_output.md
+```
+
+### 테스트 실행
+
+```bash
+# 검증 케이스(단위 및 통합 테스트) 실행
+python -m unittest tests/test_briefing_limdoyun.py
+```
