@@ -13,7 +13,7 @@
 
 | 담당자 | GitHub | Issue | 개인 브랜치 예정 | 기본 리뷰 대상 |
 | --- | --- | --- | --- | --- |
-| 이영 · 데이터 수집·구조 확인 | `twozero3213-beep` | #3 | `feature/twozero3213-beep-data` | 임도윤 PR |
+| 이영 · 데이터 수집·구조 확인 | `twozero3213-beep` | #3 | `feature/setup-collaboration` (#2와 같은 설정 PR) | 임도윤 PR |
 | 강동윤 · 재무 SQL | `dongyungang94-coder` | #4 | `feature/dongyungang94-coder-finance-sql` | 안지형 PR |
 | 나지수 · 공시 SQL | `skwltn2004-code` | #5 | `feature/skwltn2004-code-disclosure-sql` | 이정수 PR |
 | 안지형 · 재무 Pandas | `agh3724` | #6 | `feature/agh3724-finance-pandas` | 강동윤 PR |
