@@ -27,7 +27,16 @@ jupyter nbconvert --to notebook --execute notebooks/analysis_disclosure.ipynb --
 
 현재 Windows의 Pandas 3.0.4 환경에서 `pd.to_datetime`이 실제 438행의 Arrow 문자열에 접근 위반을 일으켰다. 날짜 형식 검증과 월 추출은 표준 라이브러리 `datetime.strptime`로 바꾸고 같은 원본·테스트를 다시 통과했다. 다른 환경의 Pandas 동작까지 일반화한 결론은 아니다.
 
-공시 SQL 담당 작업이 통합되면 그 쿼리와도 최종 교차검증해야 한다. 지금의 노트북 SQL은 독립 비교용 쿼리다.
+## 최종 공통 제출물과 재검증
+
+공시 SQL 배정 역할은 이영 대체 구현 [PR #16](https://github.com/twozero3213-beep/kb-bridge-financial-detective/pull/16)으로 `dev`에 통합됐다. 이정수 담당 Pandas 함수와 `sql/queries_disclosure.sql`을 [`src/run_disclosure_sql.py`](../src/run_disclosure_sql.py)로 비교하면 공시 438건, 197그룹, 월 24개, 정정·첨부추가 30건, 비교 36항목 모두 `PASS`다. 기존 담당 노트북의 SQL은 독립 비교용으로 보존하며 공통 제출 `sql/queries.sql`과 `notebooks/analysis.ipynb`가 최종 통합 경로다.
+
+```powershell
+python -m src.run_disclosure_sql data/processed/dart.sqlite
+jupyter nbconvert --to notebook --execute notebooks/analysis.ipynb --output analysis.recheck.ipynb --output-dir data/processed
+```
+
+공통 노트북은 기본 `nbconvert` 커널 작업 폴더가 `notebooks/`라서 `src` import가 실패한 실제 오류를 [PR #18](https://github.com/twozero3213-beep/kb-bridge-financial-detective/pull/18)에서 수정했다. 재실행에서 코드 셀 4개 완료·오류 출력 0건을 확인했다. 수정 이유는 노트북 첫 코드 셀 주석에 기록됐다.
 
 ## 작업 주체
 
