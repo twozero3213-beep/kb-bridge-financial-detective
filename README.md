@@ -27,6 +27,7 @@ Python, Pandas, SQL, Git/GitHub, AI, Open DART 또는 강사 제공 데이터. n
 | `docs/work_packages.md` | 6개 독립 작업 후보와 완료 기준 |
 | `docs/data_source.md` | Open DART API 출처와 로컬 실행·검증 기준 |
 | `docs/team_prompts.md` | 팀원별 AI 프롬프트 초안과 직접 검증 기준 |
+| `docs/recording_guide.md` | 팀원별 GitHub 증거와 기록 방법 |
 | `workflow/` | 핵심 분석 완료 후 필요한 자동화 자료 |
 | `CONTRIBUTION.md` | 팀원별 Issue, Commit, PR, Review, 기여 기록 |
 | `ai_log.md` | AI 사용과 사람의 검증·판단 기록 |
@@ -42,6 +43,7 @@ Issue → 담당자 지정 → 개인 Feature Branch → 의미 있는 Commit �
 
 1. [개인 작업 후보와 분배 기준](docs/work_packages.md)을 보고 실제 데이터·스키마에 맞는 Issue를 고른 뒤 담당자를 지정한다.
    AI를 사용할 때는 [팀원용 프롬프트](docs/team_prompts.md)를 실제 입력에 맞춰 수정한다.
+   실제 Commit·PR·Review 기록은 [팀원별 GitHub 기록 안내](docs/recording_guide.md)를 따른다.
 2. 저장소를 Clone하고 `dev`를 최신 상태로 가져온다.
 
    ```bash
