@@ -98,31 +98,31 @@ Review한 PR: [이정수 PR #10 수정 요청](https://github.com/twozero3213-be
 
 ## 이영
 
-담당 Issue:
+담당 Issue: [#2 GitHub 협업 설정](https://github.com/twozero3213-beep/kb-bridge-financial-detective/issues/2), [#3 데이터 구조·적재](https://github.com/twozero3213-beep/kb-bridge-financial-detective/issues/3)
 
-담당 기능:
+담당 기능: Open DART 응답 수집·SQLite 적재, 로컬 데이터 구조 확인과 팀 GitHub 흐름 관리
 
-Branch:
+Branch: `feature/setup-collaboration`
 
-개인 산출물:
+개인 산출물: `src/dart_fetch.py`, `src/build_db.py`, `tests/test_dart_fetch.py`, `tests/test_build_db.py`, `docs/data_source.md`, `.github/` Issue·PR 양식과 `docs/project_rules.md`; `ai_log.md`의 이영 절
 
-주요 Commit:
+주요 Commit: [협업 양식·역할 배정 `d3ddad1`](https://github.com/twozero3213-beep/kb-bridge-financial-detective/commit/d3ddad1), [Open DART 수집·DB 생성 `4fb1c95`](https://github.com/twozero3213-beep/kb-bridge-financial-detective/commit/4fb1c95), [실제 데이터 구조 기록 `4baaca5`](https://github.com/twozero3213-beep/kb-bridge-financial-detective/commit/4baaca5)
 
-Pull Request:
+Pull Request: [#9](https://github.com/twozero3213-beep/kb-bridge-financial-detective/pull/9) → `dev` 대상, 충돌 해결·재검토 중
 
-Review한 PR:
+Review한 PR: 추후 실제 제출 리뷰 링크 기록
 
-본인 기여 설명:
+본인 기여 설명: 공통 수집·적재 코드로 로컬 Open DART JSON 4개에서 재무 60행과 공시 438건의 SQLite DB를 재현했다. 이영 요청으로 Codex가 코드·테스트·기록을 작성·실행했고 이영 계정에 올린다.
 
-60초 설명:
+60초 설명: `src/dart_fetch.py`가 2023·2024 재무·공시를 페이지별로 수집하고, `src/build_db.py`가 금액 문자열과 접수번호를 보존해 SQLite `finance`·`disclosures` 테이블에 적재한다. 실제 데이터는 재무 60행·공시 438건이며 키는 Git에 올리지 않는다.
 
 상태:
 
-- [ ] Issue
-- [ ] Feature Branch
-- [ ] 의미 있는 Commit 1
-- [ ] 의미 있는 Commit 2
-- [ ] Pull Request
+- [x] Issue
+- [x] Feature Branch
+- [x] 의미 있는 Commit 1
+- [x] 의미 있는 Commit 2
+- [x] Pull Request
 - [ ] 다른 팀원 PR Review
 - [ ] dev Merge
 - [ ] 최종 결과물 반영
