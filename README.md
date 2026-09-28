@@ -53,3 +53,7 @@ Issue → 담당자 지정 → 개인 Feature Branch → 의미 있는 Commit �
 ## 핵심 결과
 
 TBD - 분석 완료 후 작성.
+
+## 이정수 공시 Pandas 분석
+
+독립 Notebook: `notebooks/analysis_disclosure.ipynb`. 실행·자동 입력 연결·검증 근거는 [공시 Pandas 안내](docs/disclosure_pandas.md)를 참고한다. 공통 DB와 팀 설정을 준비한 뒤 `python -m src.disclosure_pandas`로 같은 분석을 실행할 수 있다. 현재 합성 테스트만 검증했으며 실제 기업 분석은 대기 중이다.
