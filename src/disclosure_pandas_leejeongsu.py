@@ -25,6 +25,7 @@ def analyze(disclosures, threshold_pct=50, min_change=10):
         if any(not isinstance(value, str) or len(value) != 8 or not value.isdigit()
                for value in rows.rcept_dt.tolist()):
             raise ValueError("접수일 형식 오류")
+        # Windows/Pandas 3 Arrow 문자열의 벡터 날짜 변환이 접근 위반을 내어 검증된 문자열을 직접 파싱한다.
         dates = [datetime.strptime(value, "%Y%m%d") for value in rows.rcept_dt.tolist()]
     except (TypeError, ValueError) as exc:
         raise ValueError("접수일 형식 오류") from exc
